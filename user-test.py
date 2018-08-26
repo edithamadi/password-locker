@@ -8,3 +8,18 @@ class TestUser(unittest.TestCase):
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
     '''
+def setUp(self):
+        '''
+        Set up method to run before each test cases.
+        '''
+        self.new_user = User("Edith","Amadi","ADR5e") # create user object
+
+
+def test_init(self):
+        '''
+        test_init test case to test if the object is initialized properly
+        '''
+
+        self.assertEqual(self.new_user.first_name,"Edith")
+        self.assertEqual(self.new_user.last_name,"Amadi")
+        self.assertEqual(self.new_pass_word.pass_word,"ADR5e")
