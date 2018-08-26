@@ -8,9 +8,13 @@ def __init__(self,first_name,pass_word):
         self.first_name = first_name
         self.pass_word = pass_word
 
-def save_user(self): #created save_user method and appended it to the user list
+def save_user(self):
 
-        User.user_list.append(self) 
+        '''
+        save_user method saves user objects into contact_list
+        '''
+
+        User.user_list.append(self)
 
 
 
