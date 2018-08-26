@@ -23,15 +23,24 @@ def delete_user(self):
     User.user_list.remove(self)
 
 @classmethod
-def find_by_first_username(cls,first_name):
+def user_exists(cls,first_name):
         '''
-        Method that takes in a first_name and returns a user that matched that first_name.
+        Method that checks if a user exists in the user_list.
         Args:
-            first_name: first_name to search for
-        Returns:
-             user  that matched the first_name
+            username: Username to search if it exists
+        Returns :
+            Boolean: True or false depending on if the user exists or not
         '''
-
         for user in cls.user_list:
             if user.first_name == first_name:
-                return user
+                    return True
+
+        return False  
+
+@classmethod
+def display_users(cls):
+    '''
+    method which returns user list
+    '''
+
+    return cls.user_list

@@ -41,24 +41,31 @@ def test_delete_user(self):
         test_delete_user to test if it's possible to remove a user from user_list
         '''
         self.new_user.save_user()
-        test_user = User("Edith","ADR5e") #added user
+        test_user = User("Test","AD5e") #added user
         test_user.save_user()
 
         self.new_user.delete_user() #deletes user object
         self.assertEqual(len(User.user_list),1)
 
-def test_find_user_by_first_name(self):
+def test_user_exists(self):
         '''
-        test to check if we can find a user by first_name and display information
+        test to check whether a user exists or not.
         '''
-
         self.new_user.save_user()
-        test_user = User ("Edith","ADR5e") # new user
+        test_user = User("Test","gL1998") # new user created
         test_user.save_user()
 
-        found_user = User.find_user_by_first_name("Edith")
+        user_exists =User.user_exists("Test")
 
-        self.assertEqual(found_user.password,test_user.password)
+        self.assertTrue(user_exists)
+
+def test_display_users(self):
+        '''
+        method that returns a list of all users saved in the user_list
+        '''
+
+        self.assertEqual( User.display_users(),User.user_list)
+
         
 if __name__ == '__main__':
     unittest.main()
