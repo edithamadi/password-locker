@@ -32,7 +32,7 @@ def test_save_multiple_contact(self):
             '''
 
             self.new_user.save_user()
-            test_user = User("Edith","ADR5e")
+            test_user = User("Test","AD5e")
             test_user.save_user()
             self.assertEqual(len(User.user_list),2)
 
@@ -46,6 +46,19 @@ def test_delete_user(self):
 
         self.new_user.delete_user() #deletes user object
         self.assertEqual(len(User.user_list),1)
+
+def test_find_user_by_first_name(self):
+        '''
+        test to check if we can find a user by first_name and display information
+        '''
+
+        self.new_user.save_user()
+        test_user = User ("Edith","ADR5e") # new user
+        test_user.save_user()
+
+        found_user = User.find_user_by_first_name("Edith")
+
+        self.assertEqual(found_user.password,test_user.password)
         
 if __name__ == '__main__':
     unittest.main()
