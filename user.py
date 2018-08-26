@@ -22,19 +22,16 @@ def delete_user(self):
     '''
     User.user_list.remove(self)
 
+@classmethod
+def find_by_first_username(cls,first_name):
+        '''
+        Method that takes in a first_name and returns a user that matched that first_name.
+        Args:
+            first_name: first_name to search for
+        Returns:
+             user  that matched the first_name
+        '''
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        for user in cls.user_list:
+            if user.first_name == first_name:
+                return user
