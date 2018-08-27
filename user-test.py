@@ -85,6 +85,18 @@ def test_delete_credentials(self):
         self.new_credentials.delete_credentials() #deletes credentials object
         self.assertEqual (len(Credentials.credentials_list),1)
 
+def test_find_credentials_by_account_name(self):
+        '''
+        to check if we can find a credential by the account name and display more information about it
+        '''  
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Github","edithamadi","JAS5e")
+        test_credentials.save_credentials()
+
+        found_credentials =Credentials.find_by_account_name("Github")
+        self.assertEqual(found_credentials.password,test_credentials.password)
+
+
 
 
 
