@@ -74,7 +74,16 @@ class TestCredentials(unittest.TestCase):
       unittest.TestCase:TestCase class helping in creating test cases
       '''  
 
+def test_delete_credentials(self):
+        '''
+        tests if we can delete a credential from our credentials list
+        '''  
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Github","edithamadi","JAS5e")
+        test_credentials.save_credentials()
 
+        self.new_credentials.delete_credentials() #deletes credentials object
+        self.assertEqual (len(Credentials.credentials_list),1)
 
 
 
