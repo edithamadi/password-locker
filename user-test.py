@@ -67,6 +67,5 @@ def test_display_users(self):
 
         self.assertEqual( User.display_users(),User.user_list)
 
-        
-if __name__ == '__main__':
-    unittest.main()
+        if __name__ == '__main__':
+            unittest.main()
