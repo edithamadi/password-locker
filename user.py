@@ -44,3 +44,23 @@ def display_users(cls):
     '''
 
     return cls.user_list
+
+class Credentials:
+    """
+    Class that generates new instances of user's credential
+    """
+
+    credentials_list = [] #Empty credentials list 
+
+    def __init__(self,account_name,login_name,password):
+        """
+        __init__ method that defines properties for our objects
+        Args:
+            account_name: New credential acc_name.
+            login_name: New credential login_name.
+            password: New credential pword.
+        """
+
+        self.account_name = account_name
+        self.login_name = login_name
+        self.password = password
