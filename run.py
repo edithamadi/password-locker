@@ -21,6 +21,14 @@ def del_user(user)
     '''
     user.delete_user()
 
+def find_user(first_name):
+    '''
+    Function that finds a contact by number and returns the contact
+    '''
+    return User.find_by_first_name(first_name) 
+
+
+
 
 
 
