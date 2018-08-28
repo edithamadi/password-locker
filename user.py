@@ -80,7 +80,7 @@ class Credentials:
         '''
 
         Credentials.credentials_list.remove(self)
-        
+
     @classmethod
     def display_all_credentials(cls):
         '''
@@ -117,5 +117,5 @@ class Credentials:
             if credentials.account_name == account_name:
                 return True
 
-                return False  
+            return False  
 

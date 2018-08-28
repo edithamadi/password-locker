@@ -1,0 +1,56 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Credentials	../user.py	/^class Credentials:$/;"	kind:class	line:48
+TestCredentials	../user-test.py	/^class TestCredentials(unittest.TestCase):$/;"	kind:class	line:66
+TestUser	../user-test.py	/^class TestUser(unittest.TestCase):$/;"	kind:class	line:4
+User	../user.py	/^class User:$/;"	kind:class	line:1
+__init__	../user.py	/^    def __init__(self,account_name,login_name,password):$/;"	kind:member	line:55
+__init__	../user.py	/^    def __init__(self,first_name,pass_word):$/;"	kind:member	line:4
+check_existing_credentials	../run.py	/^def check_existing_credentials(first_name):$/;"	kind:function	line:68
+check_existing_users	../run.py	/^def check_existing_users(first_name):$/;"	kind:function	line:30
+create_credentials	../run.py	/^def create_credentials(account_name,login_name,pass_word): #created the function create_user$/;"	kind:function	line:43
+create_user	../run.py	/^def create_user(first_name,pass_word): #created the function create_user$/;"	kind:function	line:5
+credentials_exist	../user.py	/^    def credentials_exist(cls,account_name):$/;"	kind:member	line:108
+credentials_list	../user.py	/^    credentials_list = [] #Empty credentials list $/;"	kind:variable	line:53
+del_credentials	../run.py	/^def del_credentials(credential):$/;"	kind:function	line:56
+del_user	../run.py	/^def del_user(user):$/;"	kind:function	line:18
+delete_credentials	../user.py	/^    def delete_credentials(self):$/;"	kind:member	line:77
+delete_user	../user.py	/^    def delete_user(self):$/;"	kind:member	line:19
+display_all_credentials	../user.py	/^    def display_all_credentials(cls):$/;"	kind:member	line:85
+display_credentials	../run.py	/^def display_credentials():$/;"	kind:function	line:74
+display_users	../run.py	/^def display_users():$/;"	kind:function	line:36
+display_users	../user.py	/^    def display_users(cls):$/;"	kind:member	line:41
+find_by_account_name	../user.py	/^    def find_by_account_name(cls,account_name):$/;"	kind:member	line:93
+find_credentials	../run.py	/^def find_credentials(first_name):$/;"	kind:function	line:62
+find_user	../run.py	/^def find_user(first_name):$/;"	kind:function	line:24
+main	../run.py	/^def main():$/;"	kind:function	line:80
+run.py	../run.py	1;"	kind:file	line:1
+save_credentials	../run.py	/^def save_credentials(credential): # created function$/;"	kind:function	line:50
+save_credentials	../user.py	/^    def save_credentials(self):$/;"	kind:member	line:68
+save_user	../user.py	/^    def save_user(self):$/;"	kind:member	line:11
+save_users	../run.py	/^def save_users(user): # created function$/;"	kind:function	line:12
+setUp	../user-test.py	/^        def setUp(self):$/;"	kind:member	line:6
+setUp	../user-test.py	/^        def setUp(self):$/;"	kind:member	line:75
+tearDown	../user-test.py	/^        def tearDown(self):$/;"	kind:member	line:10
+tearDown	../user-test.py	/^        def tearDown(self):$/;"	kind:member	line:81
+test_credentials_exists	../user-test.py	/^        def test_credentials_exists(self):$/;"	kind:member	line:132
+test_delete_credentials	../user-test.py	/^        def test_delete_credentials(self):$/;"	kind:member	line:110
+test_delete_user	../user-test.py	/^        def test_delete_user(self):$/;"	kind:member	line:36
+test_display_all_credentials	../user-test.py	/^        def test_display_all_credentials(self):$/;"	kind:member	line:144
+test_display_users	../user-test.py	/^        def test_display_users(self):$/;"	kind:member	line:59
+test_find_credentials_by_account_name	../user-test.py	/^        def test_find_credentials_by_account_name(self):$/;"	kind:member	line:121
+test_init	../user-test.py	/^        def test_init(self):$/;"	kind:member	line:16
+test_init	../user-test.py	/^        def test_init(self):$/;"	kind:member	line:87
+test_save_credentials	../user-test.py	/^        def test_save_credentials(self):$/;"	kind:member	line:93
+test_save_multiple_contact	../user-test.py	/^        def test_save_multiple_contact(self):$/;"	kind:member	line:25
+test_save_multiple_credentials	../user-test.py	/^        def test_save_multiple_credentials(self):$/;"	kind:member	line:100
+test_save_user	../user-test.py	/^        def test_save_user(self):$/;"	kind:member	line:20
+test_user_exists	../user-test.py	/^        def test_user_exists(self):$/;"	kind:member	line:47
+user-test.py	../user-test.py	1;"	kind:file	line:1
+user.py	../user.py	1;"	kind:file	line:1
+user_exists	../user.py	/^    def user_exists(cls,first_name):$/;"	kind:member	line:26
+user_list	../user.py	/^    user_list = [] # Empty user list$/;"	kind:variable	line:2
