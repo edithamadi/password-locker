@@ -105,8 +105,8 @@ class Credentials:
     Returns:
         Boolean:True or false depending on if the credential exists    
     '''      
-    for credential in cls.credentials_list:
-      if credential.account_name == account_name:
+    for credentials in cls.credentials_list:
+      if credentials.account_name == account_name:
         return True
 
     return False  
