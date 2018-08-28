@@ -146,7 +146,7 @@ class TestCredentials(unittest.TestCase):
                 returns a list of all credentials saved 
                 '''  
 
-                self.assertEqual(Credentials.display_all_credentials(),Credentials.credentials_list)
+                self.assertEqual( Credentials.display_all_credentials(),Credentials.credentials_list)
 
 if __name__ == '__main__':
         unittest.main()
