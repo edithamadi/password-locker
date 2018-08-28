@@ -27,6 +27,13 @@ def find_user(first_name):
     '''
     return User.find_by_first_name(first_name) 
 
+def check_existing_users(first_name):
+    '''
+    Function that check if a contact exists with that number and return a Boolean
+    '''
+    return User.user_exists(first_name)
+
+
 
 
 
