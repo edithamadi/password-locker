@@ -9,3 +9,9 @@ def create_user(first_name,pass_word): #created the function create_user
     new_user = User(first_name,pass_word) #created new user object and return it
     return new_user
 
+def save_users(user):
+    '''
+    function to save users
+    '''
+    user.save_user() #method to save the user
+
