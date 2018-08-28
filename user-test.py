@@ -16,7 +16,6 @@ def tearDown(self):
 def test_init(self):
 
         self.assertEqual(self.new_user.first_name,"Edith")
-        self.assertEqual(self.new_pass_word.pass_word,"ADR5e")
 
 def test_save_user(self):
        
