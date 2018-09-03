@@ -49,7 +49,7 @@ class TestUser(unittest.TestCase):
                 test to check whether a user exists or not.
                 '''
                 self.new_user.save_user()
-                test_user = User("Test","gL1998") # new user created
+                test_user = User("Test","AD5e") # new user created
                 test_user.save_user()
 
                 user_exists =User.user_exists("Test")
@@ -61,7 +61,20 @@ class TestUser(unittest.TestCase):
                 method that returns a list of all users saved in the user_list
                 '''
 
-                self.assertEqual( User.display_users(),User.user_list)
+                self.assertEqual( User.display_all_users(),User.user_list)
+
+def test_find_user_by_username(self):
+        '''
+        test to check if we can find a user by username and display information
+        '''
+
+        self.new_user.save_user()
+        test_user = User ("Test","AD5e") # new user
+        test_user.save_user()
+
+        found_user = User.find_by_username("Test")
+
+        self.assertEqual(found_user.pass_word,test_user.pass_word)
 
 class TestCredentials(unittest.TestCase):
 
