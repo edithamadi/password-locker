@@ -91,8 +91,8 @@ if in_short_code == 'ca':
     print(f"Thank you {first_name}, you may now proceed to open up your account")
     print('\n')
     
-    elif in_short_code == 'si':
-        
+elif in_short_code == 'si':
+
     print('\n')
     print("Enter your account first name to continue:")
     first_name =input()
@@ -100,24 +100,23 @@ if in_short_code == 'ca':
     pass_word=input()
 if check_existing_users(first_name):
         saved_user = find_user(first_name)  
-    print(f"Welcome to your account {saved_user.first_name}")  
-    print('\n')
+        print(f"Welcome to your account {saved_user.first_name}")  
+        print('\n')
 
-    elif in_short_code == 'fu':
+elif in_short_code == 'fu':
     print(" \n Enter any username to find user: \n")
     search_first_name = input()
 if check_existing_users(search_first_name):
         search_user = find_user(search_first_name)
         print(f"{search_user.first_name}")
         print(f"Password.......{search_user.pass_word}")
-    else:
-            print("Sorry,This account does not exist!")
+else:
+        print("Sorry,This account does not exist!")
 
-    elif in_short_code =='ex' :
-    print("Try again later,Goodbye!...")
-    break
-    
-            
+elif in_short_code =='ex' :
+
+        print("Try again later,Goodbye!...")
+    break        
 
     elif in_short_code == 'cc':
                     print('\n')
