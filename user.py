@@ -1,6 +1,3 @@
-import string
-import pyperclip
-from random import choice
 
 class User:
     user_list = [] # Empty user list
