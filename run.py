@@ -69,7 +69,7 @@ def main():
     print(f"Hello {first_name} what would you like to do?")
     print('\n')
     while True:
-        print("Use these short codes: ca - create a new user ,si - sign in to your account ,fu- find a user")
+        print("Use these short codes: ca - create a new user ,si - sign in to your account,gp - generate password")
         in_short_code = input().lower()
         if in_short_code == 'ca':
             print("Create a new account by following the steps below:")
@@ -82,6 +82,12 @@ def main():
             print('\n')
             print(f"Thank you {first_name}, you may now proceed to open up your account")
             print('\n')
+
+        elif in_short_code == 'gp':
+                        alphabet = string.ascii_letters + string.digits
+                        pass_word = ''.join(choice(alphabet) for i in range(8))
+                        print(f"Your new generated password is: {pass_word} \n")
+                      
     
         elif in_short_code == 'fu':
             if check_existing_users(search_first_name):
