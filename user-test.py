@@ -1,5 +1,6 @@
 # import pyperclip
 import unittest # Importing the unittest module 
+import pyperclip
 from user import User,Credentials # Importing the user class
 class TestUser(unittest.TestCase):
     
@@ -33,17 +34,7 @@ class TestUser(unittest.TestCase):
                 test_user.save_user()
                 self.assertEqual(len(User.user_list),2)
 
-        def test_delete_user(self):
-                '''
-                test_delete_user to test if it's possible to remove a user from user_list
-                '''
-                self.new_user.save_user()
-                test_user = User("Test","AD5e") #added user
-                test_user.save_user()
-
-                self.new_user.delete_user() #deletes user object
-                self.assertEqual(len(User.user_list),1)
-
+        
         def test_user_exists(self):
                 '''
                 test to check whether a user exists or not.
@@ -56,18 +47,11 @@ class TestUser(unittest.TestCase):
 
                 self.assertTrue(user_exists)
 
-        def test_display_users(self):
-                '''
-                method that returns a list of all users saved in the user_list
-                '''
-
-                self.assertEqual( User.display_all_users(),User.user_list)
-
-def test_find_user_by_username(self):
+        def test_find_user_by_username(self):
         '''
         test to check if we can find a user by username and display information
         '''
-
+        
         self.new_user.save_user()
         test_user = User ("Test","AD5e") # new user
         test_user.save_user()

@@ -1,3 +1,7 @@
+import string
+import pyperclip
+from random import choice
+
 class User:
     user_list = [] # Empty user list
 
@@ -8,26 +12,24 @@ class User:
         self.first_name = first_name
         self.pass_word = pass_word
 
-    def save_user(self):
+    def save_user(self):    
 
             '''
             save_user method saves user objects into contact_list
             '''
 
             User.user_list.append(self)
+    @classmethod
+    def display_all_users(cls,username):    
 
-    def delete_user(self):
-        '''
-        delete_user method deletes a saved user from user_list
-        '''
-        User.user_list.remove(self)
+            '''
+            save_user method saves user objects into contact_list
+            '''
+            for user in cls.user_list:
+                if user.username == username:
+                    return user
 
-    def find_user(self,username):
-        '''
-        Funtion that finds a user by a login and returns the user
-        '''
-        return User.find_by_username(username)
-
+    
     @classmethod
     def find_by_username(cls,username):
         '''
@@ -58,14 +60,7 @@ class User:
 
             return False  
 
-    @classmethod
-    def display_all_users(cls):
-        '''
-        method which returns user list
-        '''
-
-        return cls.user_list
-
+    
 class Credentials:
     """
     Class that generates new instances of user's credential
@@ -103,14 +98,6 @@ class Credentials:
         Credentials.credentials_list.remove(self)
 
     @classmethod
-    def display_all_credentials(cls):
-        '''
-        method that returns a list of all credentials saved
-        '''
-
-        return cls.credentials_list
-
-    @classmethod
     def find_by_account_name(cls,account_name):
         '''
         method that takes in the account name and returns a credential that matches that account name
@@ -140,3 +127,10 @@ class Credentials:
 
             return False  
 
+    @classmethod
+    def display_all_credentials(cls):
+        '''
+        method that returns a list of all credentials saved
+        '''
+
+        return cls.credentials_list
